@@ -1,3 +1,3 @@
 # site_touristique_finistere_fdrv
 
-developpement d un ssite de présentation du finistère
+développement d un site de présentation du finistère (,présentation du département, des lieux à visiter, des marchés et des actualités)
