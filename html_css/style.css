@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+
+/* reset des marges body*/
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background: rgb(224, 231, 237);
+    height: auto;
+}
+
+
+    /* étirement menu et couleur fond*/
+    nav{
+        width: 100%;
+        height: fit-content;
+        background-color: #EEE ;
+    }
+
+    /* reset des marges  ul du menu principal avec chevron complexe nav > ul.  */
+
+    nav> ul{
+        float: right;
+        margin: 0px;
+        padding: 0px;
+    }
+    /* pseudo élement ::after* pour éviter d'avoir une hauteur à 0 px */
+    nav> ul::after{
+        content:"";
+        display: block;
+        clear: both;
+    }
+
+
+    /* positionnement cote à cote des menus enfant avec chevron complexe nav > ul > li.
+    On cible uniquement les enfants direct du chevron ul de nav + position relative absolute*/
+    nav > ul > li{
+        float:left;
+        position:relative;
+    }
+
+    /* dans le code suivant on ne vise que les éléments <a> qui sont sous nav>ul>li */
+    nav >ul >li > a{
+
+        padding: 20px 30px;
+        color:rgba(000, 112, 192, 0.9)
+    }
+
+    nav > ul >li:hover a{
+        padding: 15px 30px 20px 30px;
+    }
+
+    /* enlèvement par défaut des puces de listes */
+    nav li{
+        list-style: none;
+    }
+
+    /* on veut que les menu n'apparaissent que lorsque l'utilisateur passe sa souris sur le menu */
+    .submenu{
+        display: none;
+    }
+
+    /* on veut ajouter une marge interieure des onglets, changement de couleur et enlèvement soulignement des élements "a" dans le menu nav
+    Toujours bien cibler les éléments visés exemple : nav a:*/
+    nav a{
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    /* PARTIE TRAITEMENT DES SOUS ONGLETS:*/
+
+    /* on veut modifier l'aspect des onglets uniquement lorsque la souris passe sur le menu correspondant ! (le menu li dont la classe est submenu */
+    nav li:hover .submenu {
+        display: inline-block;
+        position: absolute;
+        top: 100%;
+        left: 0px;
+        padding: 0px;
+        z-index: 1000;
+    }
+    /* animation des submenus */
+    .submenu li{
+        border-bottom: 1px solid #CCC;
+    }
+    .submenu li a{
+        padding: 15px 30px;
+        font-size: 13px;
+        color: #222538;
+        width: 270px;
+    }
+
+    .menu__accueil:hover{
+        border-top: 5px solid #e44d26;
+        background-color: rgba(228, 77, 38, 0.15);
+    }
+
+    .menu__page1:hover{
+        border-top: 5px solid #0070bb;
+        background-color: rgba(000, 112, 192, 0.15);
+    }
+
+    .menu__page2:hover{
+        border-top: 5px solid #f1dc4f;
+        background-color: rgba(241, 211, 79, 0.15);
+    }
+
+    .menu__page3:hover{
+        border-top: 5px solid rgb(22, 197, 36);
+        background-color: rgba(11, 32, 14, 0.15);
+    }
+
+    .menu__accueil .submenu{
+        background-color: rgba(230,100,40);
+    }
+
+    .menu__page1 .submenu{
+        background-color: rgba(000,160,240);
+    }
+
+    .menu__page2 .submenu{
+        background-color: rgba(250, 215, 100);
+    }
+
+    .menu__page3 .submenu{
+        background-color: rgb(117, 250, 100);
+    }
+
+
+
+    .submenu li:hover a{
+        color: #EEE;
+        font-weight:bold;
+    }
+
+    .menu__accueil .submenu li:hover{
+        background-color: rgb(210, 77,60);
+    }
+
+    .menu__page1 .submenu li:hover{
+        background-color: rgb(000,115,200);
+    }
+
+    .menu__page2 .submenu li:hover{
+        background-color: rgb(0200,165,75);
+    }
+
+
+    
+main {
+        display: block;
+        justify-content: center;
+        max-width: 900px;
+        margin: auto;
+    }
+h1 {
+    background: #EEE;
+    color: #37407c;
+    font-weight: 400, bold;
+    font-size: 2.5rem;
+    margin: O;
+    display: flex;
+    justify-content: center;
+}
+    
+h2 {
+    display: flex;
+    justify-content: center;
+    background: #EEE;
+    color: #37407c;
+    border:1px,solid,#425558;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+p {
+    display: flex;
+    justify-content: center;
+    background: #EEE;
+    color: #37407c;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 1rem;
+}
+#logo {
+    display: inline-block ;
+    width: 40px;
+}
+img {
+    display: block;
+    width: 100%;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 7rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+
+    background-color: white;
+    height: 91vh;
+    border-radius: 15px;
+    border: 0rem;
+
+
+
+
+
+
