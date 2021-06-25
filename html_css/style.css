@@ -49,6 +49,7 @@ h2 {
 }
 
 p {
+    text-align: justify;
     display: flex;
     justify-content: center;
     color: #37407c;
@@ -65,10 +66,9 @@ p {
     margin: 0 auto;
     position: fixed;
     left: 0;
-    top: 10%;
+    top: 0;
     width: 100%;
-    margin-top: -3em;
-    z-index: 50;
+        z-index: 50;
 
 }
 
