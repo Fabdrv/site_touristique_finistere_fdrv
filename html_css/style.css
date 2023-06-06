@@ -1,0 +1,187 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+
+/* reset des marges body*/
+#logo{
+    margin-left: 20px;
+    height: auto;
+}
+
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0px;
+    
+}
+
+main {  
+    display: block;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    
+    }
+header {
+    
+    height: 150px;
+}
+
+h1 {
+    justify-content: center;
+    align-items: center;
+    color: #37407c;
+    font-weight: 350;
+    font-size: 2.5rem;
+    margin: 40px;
+    padding-top: 30px;
+}
+    
+h2 {
+    display: flex;
+    justify-content: center;
+    color: #37407c;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 2.5rem;
+}
+
+p {
+    text-align: justify;
+    display: flex;
+    justify-content: center;
+    color: #37407c;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-size: 1rem;
+    padding: 10px 20px 10px 20px;
+}
+
+/* étirement menu et couleur fond*/
+#table{
+    background-color: white;
+    display: table;
+    margin: 0 auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+        z-index: 50;
+
+}
+
+/* reset des marges  ul du menu principal avec chevron complexe nav > ul.  */
+
+nav> ul{
+        float: right;
+        margin: 0px;
+        padding: 0px;
+        height: fit-content;
+}
+/* pseudo élement ::after* pour éviter d'avoir une hauteur à 0 px */
+nav> ul::after{
+        content:"";
+        display: block;
+        clear: both;
+}           
+
+/* positionnement cote à cote des menus enfant avec chevron complexe nav > ul > li.
+On cible uniquement les enfants direct du chevron ul de nav + position relative absolute*/
+
+nav > ul > li{
+        float:left;
+        position:relative;
+        font-size: large;
+}
+
+    /* dans le code suivant on ne vise que les éléments <a> qui sont sous nav>ul>li */
+nav >ul >li > a{
+        padding: 20px 30px;
+        color:rgba(000, 112, 192, 0.9)
+}
+nav > ul >li:hover a{
+        padding: 15px 30px 30px 30px;
+}
+    /* enlèvement par défaut des puces de listes */
+nav li{
+        list-style: none;
+}
+    /* on veut ajouter une marge interieure des onglets, changement de couleur et enlèvement soulignement des élements "a" dans le menu nav
+    Toujours bien cibler les éléments visés exemple : nav a:*/
+nav a{
+        display: inline-block;
+        text-decoration: none;
+}
+    /* PARTIE TRAITEMENT DES SOUS ONGLETS:*/
+.menu__accueil:hover{
+        border-top: 5px solid #e44d26;
+        background-color: rgba(228, 77, 38, 0.15);
+}
+.menu__page1:hover{
+        border-top: 5px solid #0070bb;
+        background-color: rgba(000, 112, 192, 0.15);
+}
+.menu__page2:hover{
+        border-top: 5px solid #f1dc4f;
+        background-color: rgba(241, 211, 79, 0.15);
+}
+.menu__page3:hover{
+        border-top: 5px solid rgb(22, 197, 36);
+        background-color: rgba(11, 32, 14, 0.15);
+}
+.menu__accueil .submenu li:hover{
+        background-color: rgb(210, 77,60);
+}
+.menu__page1 .submenu li:hover{
+        background-color: rgb(000,115,200);
+}
+.menu__page2 .submenu li:hover{
+        background-color: rgb(0200,165,75);
+}
+
+#logo {
+    display: inline-block ;
+    width: 60px;
+}
+img {
+    display: block;
+    width: 100%;
+}
+
+footer {
+    height: 80px;
+    padding-top: 30px;
+    text-align: center;
+    border-top: #0070bb;
+
+
+
+}
+.footer__nom {
+
+    display: block;
+    margin: auto;
+}
+.footer__email {
+
+    display: block;
+    margin: auto;
+}
+.footer__subject {
+
+    display: inline-block;
+    margin: 1auto;
+}
+.footer__message {
+
+    display: inline-block;
+    margin: 10px;
+}
+
+.footer__sendmail {
+
+    display: inline-block;
+    margin: 10px;
+}
